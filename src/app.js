@@ -8,5 +8,7 @@ const bodyParser = require("body-parser");
 app.use(cors());
 app.use(express.json());
 app.use("/api", courseRouter);
-
+app.get("/", (req, res) => {
+  res.send("Hello, World!");
+});
 module.exports = { app };
